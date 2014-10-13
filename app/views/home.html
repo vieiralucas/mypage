@@ -10,11 +10,14 @@
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <slick slides-to-show=1 speed=300 autoplay=true init-onload=true data="lolcommits">
-                <div ng-repeat="lolcommit in lolcommits">
+        <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <div class="item" ng-repeat="lolcommit in lolcommits" ng-class="{active: $index == 0}">
                     <img class="center-block img-responsive lolcommits" ng-src="{{lolcommit}}" alt="sadness" style="max-height: 40%;">
-                </div>        
-            </slick>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="col-sm-3"></div>
     </div>

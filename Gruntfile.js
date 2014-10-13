@@ -173,9 +173,9 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
-          '<%= yeoman.dist %>/styles/{,*/}*.css',
+          '<%= yeoman.dist %>/styles/{,*/}*.css'//,
           //'<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/styles/fonts/*'
+          //'<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
     },
@@ -329,6 +329,12 @@ module.exports = function (grunt) {
             cwd: 'bower_components/font-awesome',
             src: ['fonts/*.*'],
             dest: '<%= yeoman.dist %>'
+        }, {
+            expand: true,
+            dot: true,
+            cwd: 'bower_components/slick-carousel/slick/',
+            src: ['fonts/*.*', 'ajax-loader.gif'],
+            dest: '<%= yeoman.dist %>/styles/'
         }]
       },
       styles: {

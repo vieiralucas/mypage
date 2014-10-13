@@ -22,6 +22,10 @@ angular.module('app')
             }
             $scope.lolcommits = shuffle(commits);
             $scope.$apply();
+
+            $('#myCarousel').carousel({
+                interval: 500
+            });
         })  
 
         // THANKS TO STACKOVERFLOW

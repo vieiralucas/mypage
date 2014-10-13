@@ -12,7 +12,6 @@
     "angular-animate": "~1.2.0",
     "angular-touch": "~1.2.0",
     "angular-route": "~1.2.0",
-    "angular-slick": "~0.1.11",
     "font-awesome": "~4.2.0"
   },
   "devDependencies": {
