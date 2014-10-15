@@ -1,6 +1,12 @@
 {
     "node" : [
         {
+            "title" : "lolcommits-upload",
+            "description" : "Upload your lolcommits to image hosts.",
+            "href" : "https://github.com/vieiralucas/lolcommits-upload",
+            "img" : "https://nodei.co/npm/lolcommits-upload.png?downloads=true&&downloadRank=true&stars=true"
+        },
+        {
             "title" : "jsonfylolcommits",
             "description" : "A cli tool to convert all your lolcommits photos to base64 and add them to a json output file.",
             "href" : "http://github.com/vieiralucas/jsonfylolcommits",
