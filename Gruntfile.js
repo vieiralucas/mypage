@@ -309,7 +309,6 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*',
-            'lolcommits.json',
             'projects.json'//,
             //'images/*'
           ]
@@ -366,6 +365,12 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    shell: {
+        upload: {
+            command: 'lolcommits-upload -i ./dist/lolcommits.json'
+        }
     }
   });
 
@@ -412,7 +417,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'shell'
   ]);
 
   grunt.registerTask('default', [
