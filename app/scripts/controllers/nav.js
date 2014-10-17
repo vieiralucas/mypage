@@ -14,5 +14,5 @@ angular.module('app')
                 return true;
             }
             return false;
-        }
+        };
     });

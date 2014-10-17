@@ -12,10 +12,10 @@ angular.module('app')
         var projects;
         $.getJSON('projects.json', function(data) {
             projects = {
-                "node": data.node,
-                "webapps": data.webapps,
-                "games": data.games,
-                "others": data.others
+                'node': data.node,
+                'webapps': data.webapps,
+                'games': data.games,
+                'others': data.others
             };
             $scope.projects = {};
             var rowArray = [], displayArray = [], type;
