@@ -9,24 +9,23 @@
  */
 angular.module('app')
     .controller('HomeCtrl', function ($scope) {
-        var commits = [],
-            lolcommit;
+        var imgs = [];
 
         $.getJSON('lolcommits.json', function(data) {
-            for(var i = 0; i < data.length; i++) {
-                for (lolcommit in data[i]) {
-                    if (data[i].hasOwnProperty(lolcommit)) {
-                        commits.push('data:image/jpg;base64, ' + data[i][lolcommit]);
-                    }
-                }
-            }
-            $scope.lolcommits = shuffle(commits);
+
+            $.each(data, function(repo, commits) {
+                $.each(commits, function(commit, img) {
+                    imgs.push(img);
+                });
+            });
+
+            $scope.lolcommits = shuffle(imgs);
             $scope.$apply();
 
             $('#myCarousel').carousel({
                 interval: 500
             });
-        })  
+        });
 
         // THANKS TO STACKOVERFLOW
         function shuffle(a,b,c,d){
